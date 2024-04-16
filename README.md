@@ -7,7 +7,7 @@
 ### 1. Pagina de trackeo de Estadisticas usando RiotAPI
 
 - **Descripción:** Este proyecto consiste en una pagina hecha en html i php, la cual carga las estadísitcas de diferentes jugadores i los ordena de mayor a menor.
-- **Tecnologías utilizadas:** PHP, HTML, CSS
+- **Tecnologías utilizadas:** JavaScript, HTML, CSS
 - **Enlace al repositorio:** [SemenQChallenge](https://github.com/bait-py/semen)
 
 ### 2. Configuració QTile (Gestor de Ventanas Arch Linux)
