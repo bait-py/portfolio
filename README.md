@@ -8,7 +8,7 @@ Bienvenido a mi portafolio de proyectos en GitHub. Aquí comparto proyectos que 
 - **Lenguajes**: Java, Python, HTML, CSS
 - **Frameworks**: Node.js
 - **Bases de Datos**: MySQL, MariaDB
-- **Herramientas**: Git, Docker, Figma
+- **Herramientas**: Git, Docker
 
 ## 📂 Proyectos Destacados
 
