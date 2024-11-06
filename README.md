@@ -1,33 +1,26 @@
-# Portfolio Bruno Alonso
+# 👋 Hola, soy Bruno Alonso
 
-¡Bienvenido a mi repositorio de proyectos! Aquí encontrarás una recopilación de los proyectos en los que he trabajado, mostrando mis habilidades y experiencia en diferentes áreas.
+Bienvenido a mi portafolio de proyectos en GitHub. Aquí comparto proyectos que he desarrollado y que reflejan mi crecimiento en diferentes áreas de la programación y el desarrollo de software. ¡Explora mis repositorios para ver en qué he estado trabajando! 😊
 
-## Proyectos
+---
 
-### 1. Pagina de trackeo de Estadisticas usando RiotAPI
+## 🛠️ Tecnologías y Herramientas
+- **Lenguajes**: Java, Python, HTML, CSS
+- **Frameworks**: Node.js
+- **Bases de Datos**: MySQL, MariaDB
+- **Herramientas**: Git, Docker, Figma
 
-- **Descripción:** Este proyecto consiste en una pagina hecha en html i php, la cual carga las estadísitcas de diferentes jugadores i los ordena de mayor a menor.
-- **Tecnologías utilizadas:** JavaScript, HTML, CSS
-- **Enlace al repositorio:** [SemenQChallenge](https://github.com/bait-py/semen)
+## 📂 Proyectos Destacados
 
-### 2. Configuració QTile (Gestor de Ventanas Arch Linux)
+### [📌 Proyecto 1: BUBI Server](https://github.com/bait-py/bubiserver)
+Herramienta para la configuración y personalización de servidores caseros, usando una Raspberry Pi 4.
 
-- **Descripción:** Mi configuración de QTile para mi instalacion de Arch Linux.
-- **Tecnologías utilizadas:** Bash, Python
-- **Enlace al repositorio:** [Configuracion QTile](https://github.com/bait-py/qtile-config.py)
+### [📌 Proyecto 2: Temas JO-EL](https://github.com/bait-py/temasjoel)
+Temas desarrollados y mejorados para la plataforma JO-EL.
 
-### 3. MailBomber en PHP
+### [📌 Proyecto 3: Tracking de estadisticas League Of Legends](https://github.com/bait-py/semen)
+Tracking de estadísticas en League Of Legends usando RiotAPI.
 
-- **Descripción:** Una pagina que envia correos de manera massiva utilizando PHP.
-- **Tecnologías utilizadas:** HTML, PHP, CSS
-- **Enlace al blog:** [MailBomberPHP](https://github.com/bait-py/apachephpmailsender)
-
-
-## Contacto
-
-Si estás interesado en colaborar en alguno de estos proyectos o tienes alguna pregunta, no dudes en ponerte en contacto conmigo:
-
-- **Correo electrónico:** balonsop@ies-sabadell.cat
-- **LinkedIn:** [linkedin.com/in/bruno-alonso-pujol-b14171262/](https://www.linkedin.com/in/bruno-alonso-pujol-b14171262/)
-
-¡Gracias por visitar mi portfolio!
+## 📫 Contacto
+- **Correo electrónico**: brunoalonso777@gmail.com
+- **LinkedIn**: [linkedin.com/in/brunoalonso](https://es.linkedin.com/in/bruno-alonso-pujol-b14171262)
