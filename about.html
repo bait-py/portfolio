@@ -1,50 +1,129 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>About - Bruno Alonso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        html, body { height: 100%; margin: 0; font-family: Georgia, serif; }
-            body {
-                display: flex;
-                justify-content: center; /* centro vertical */
-                align-items: center;    /* centro horizontal */
+        html, body { 
+            height: 100%; 
+            margin: 0; 
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #0D1117;
+            color: #c9d1d9;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 20px;
         }
         .contenedor {
-            display: flex;           /* ahora el wrapper también es flex */
+            display: flex;
             flex-direction: column;
             align-items: center;
             max-width: 700px;
         }
-        h1 { font-size: 24px; font-style: italic; margin: 0 0 10px; }
-        p  { margin: 10px 0; line-height: 1.5em; }
-        .links a { color: #333399; text-decoration: none; margin: 0 5px; font-size: 14px; }
-        .links a:hover { text-decoration: underline; }
+        h1 { 
+            font-size: 24px; 
+            font-weight: 700;
+            margin: 0 0 20px;
+            color: #7A95C9;
+            letter-spacing: 2px;
+        }
+        p { 
+            margin: 15px 0; 
+            line-height: 1.8em;
+            font-size: 14px;
+            color: #c9d1d9;
+        }
+        strong, b {
+            color: #7A95C9;
+            font-weight: 600;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+            text-align: left;
+            display: inline-block;
+            color: #8b949e;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.6em;
+        }
+        .links {
+            margin-top: 30px;
+        }
+        .links a { 
+            color: #7A95C9; 
+            text-decoration: none; 
+            margin: 0 8px; 
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .links a:hover { 
+            color: #a8c5e8;
+            text-decoration: underline;
+        }
+        .separator {
+            color: #484f58;
+            margin: 0 5px;
+        }
+        
+        /* Animaciones de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
 
 <div class="contenedor">
-    <h1>BRUNO&nbsp;ALONSO</h1>
+    <h1 class="animate delay-1">BRUNO&nbsp;ALONSO</h1>
 
-<p>Soy Bruno, <strong>Full-Stack Developer</strong> y entusiasta de las metodologías <strong>DevOps</strong>.
-    Me centro en la creación de soluciones robustas y escalables utilizando
-    <strong>TypeScript</strong>, <strong>Node.js</strong>, <strong>Java</strong> y <strong>Python</strong>.
-    Mi enfoque es desarrollar de principio a fin, desde la codificación hasta el despliegue optimizado.
+<p class="animate delay-2">I'm Bruno, a <strong>Full-Stack Developer</strong> and <strong>DevOps</strong> enthusiast.
+    I focus on building robust and scalable solutions using
+    <strong>TypeScript</strong>, <strong>Node.js</strong>, <strong>Java</strong>, and <strong>Python</strong>.
+    My approach is end-to-end development, from coding to optimized deployment.
 </p>
 
-<p>Mi pasión incluye:</p>
-<ul style="list-style-type: square; padding-left: 20px; text-align: left; display: inline-block;">
-    <li>La <b>automatización</b> y la <b>containerización</b> con herramientas como <b>Docker</b> y <b>Kubernetes</b>.</li>
-    <li>El mundo de los sistemas operativos (especialmente <b>Linux</b>) y la infraestructura.</li>
-    <li>Descubrir nuevas tecnologías y aplicar un estilo propio, usable y funcional, a cada proyecto.</li>
+<p class="animate delay-3">My passion includes:</p>
+<ul class="animate delay-4" style="list-style-type: square; padding-left: 20px; text-align: left; display: inline-block;">
+    <li><b>Automation</b> and <b>containerization</b> with tools like <b>Docker</b> and <b>Kubernetes</b>.</li>
+    <li>The world of operating systems (especially <b>Linux</b>) and infrastructure.</li>
+    <li>Discovering new technologies and applying my own usable and functional style to each project.</li>
 </ul>
 
-<div class="links" style="margin-top:20px;">
-    <a href="index.html">inicio</a> //
-    <a href="proyectos.html">proyectos</a> //
-    <a href="https://www.linkedin.com/in/bruno-alonso-pujol-b14171262/" target="_blank">contacto</a> //
+<div class="links animate delay-5">
+    <a href="index.html">home</a>
+    <span class="separator">//</span>
+    <a href="proyectos.html">projects</a>
+    <span class="separator">//</span>
+    <a href="https://www.linkedin.com/in/bruno-alonso-pujol-b14171262/" target="_blank">contact</a>
+    <span class="separator">//</span>
     <a href="https://github.com/bait-py" target="_blank">github</a>
 </div>
 </div>

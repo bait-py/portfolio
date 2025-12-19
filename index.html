@@ -1,29 +1,129 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index - Bruno Alonso</title>
+    <title>Home - Bruno Alonso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        html, body { height: 100%; margin: 0; font-family: Georgia, serif; }
-        table      { width: 100%; height: 100%; text-align: center; }
-        img        { width: 250px; margin: 20px 0; }
-        .nombre    { font-weight: bold; font-size: 24px; font-style: italic; }
-        .hora      { margin: 10px 0; font-size: 14px; }
-        .links a   { color: #333399; text-decoration: none; margin: 0 5px; font-size: 14px; }
-        .links a:hover { text-decoration: underline; }
+        html, body { 
+            height: 100%; 
+            margin: 0; 
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #0D1117;
+            color: #c9d1d9;
+        }
+        table { 
+            width: 100%; 
+            height: 100%; 
+            text-align: center; 
+        }
+        .pfp { 
+            width: 160px; 
+            margin: 20px 0;
+            border-radius: 50%;
+            border: 3px solid #7A95C9;
+        }
+        .bracket {
+            color: #7A95C9;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        .nombre { 
+            font-weight: 700; 
+            font-size: 24px;
+            color: #c9d1d9;
+            margin: 10px 0;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #8b949e;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+        .typing-container {
+            margin: 20px 0;
+            min-height: 25px;
+        }
+        .hora { 
+            margin: 20px 0; 
+            font-size: 13px;
+            color: #7A95C9;
+            font-weight: 500;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a { 
+            color: #7A95C9; 
+            text-decoration: none; 
+            margin: 0 8px; 
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .links a:hover { 
+            color: #a8c5e8;
+            text-decoration: underline;
+        }
+        .separator {
+            color: #484f58;
+            margin: 0 5px;
+        }
+        
+        /* Animaciones de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        .delay-7 { animation-delay: 0.7s; }
+        .delay-8 { animation-delay: 0.8s; }
     </style>
 </head>
 <body>
 
 <table>
     <tr><td>
-        <div class="nombre">BRUNO ALONSO</div> 
-        <img src="https://avatars.githubusercontent.com/u/91563229?v=4" alt="pfp">
-        <div class="hora" id="hora"></div>
-        <div class="links">
-            <a href="about.html">about</a> //
-            <a href="proyectos.html">proyectos</a> //
-            <a href="https://www.linkedin.com/in/bruno-alonso-pujol-b14171262/" target="_blank">contacto</a> //
+        <div style="margin-left: 300px" align="left" class="bracket animate delay-1">「</div>
+        <img class="pfp animate delay-2" src="https://avatars.githubusercontent.com/u/91563229?v=4" alt="pfp">
+        <div class="nombre animate delay-3">Hello there! I'm Bruno</div>
+        <div class="subtitle animate delay-4">
+            Full-Stack Developer from Spain<br>
+            Focused on Cloud-Native tech, Linux, and automation
+        </div>
+        <div class="typing-container animate delay-5">
+            <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=16&pause=1000&color=7A95C9&center=true&vCenter=true&width=435&lines=Building+impactful+solutions;DevOps+and+Infrastructure;Crafting+robust+systems." alt="Typing SVG" />
+        </div>
+        <div class="hora animate delay-6" id="hora"></div>
+        <div class="nombre animate delay-7" style="font-size: 16px; margin-top: 15px;">~ Bruno Alonso (@bait-py) ~</div>
+        <div style="margin-right: 300px" align="right" class="bracket animate delay-7">」</div>
+        <div class="links animate delay-8">
+            <a href="about.html">about</a>
+            <span class="separator">//</span>
+            <a href="proyectos.html">projects</a>
+            <span class="separator">//</span>
+            <a href="https://www.linkedin.com/in/bruno-alonso-pujol-b14171262/" target="_blank">contact</a>
+            <span class="separator">//</span>
             <a href="https://github.com/bait-py" target="_blank">github</a>
         </div>
     </td></tr>
@@ -34,7 +134,7 @@
         const ahora = new Date();
         const opciones = { timeZone: 'Europe/Madrid', hour12: false };
         document.getElementById('hora').textContent =
-        `Hora en España: ${ahora.toLocaleDateString('es-ES', opciones)} - ${ahora.toLocaleTimeString('es-ES', opciones)}`;
+        `Time in Spain: ${ahora.toLocaleDateString('en-US', opciones)} - ${ahora.toLocaleTimeString('en-US', opciones)}`;
     }
     actualizarHora();
     setInterval(actualizarHora, 1000);
