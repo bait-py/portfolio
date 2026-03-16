@@ -2,156 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Bruno Alonso</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-
-    <style>
-        html, body { 
-            height: 100%; 
-            margin: 0; 
-            font-family: 'JetBrains Mono', monospace;
-            background-color: #0D1117;
-            color: #c9d1d9;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        .contenedor {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 700px;
-        }
-        h1 { 
-            font-size: 24px; 
-            font-weight: 700;
-            margin: 0 0 30px;
-            color: #7A95C9;
-        }
-        h3 { 
-            margin: 20px 0 8px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-        h3 a {
-            color: #7A95C9;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        h3 a:hover {
-            color: #a8c5e8;
-        }
-        .proyecto {
-            margin-bottom: 15px;
-        }
-        p { 
-            margin: 5px 0 15px; 
-            line-height: 1.6em;
-            font-size: 13px;
-            color: #8b949e;
-        }
-        .links {
-            margin-top: 30px;
-        }
-        .links a { 
-            color: #7A95C9; 
-            text-decoration: none; 
-            margin: 0 8px; 
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        .links a:hover { 
-            color: #a8c5e8;
-            text-decoration: underline;
-        }
-        .separator {
-            color: #484f58;
-            margin: 0 5px;
-        }
-        
-        /* Animaciones de entrada */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-        }
-        
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
-        .delay-5 { animation-delay: 0.5s; }
-        .delay-6 { animation-delay: 0.6s; }
-        .delay-7 { animation-delay: 0.7s; }
-        .delay-8 { animation-delay: 0.8s; }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+<canvas class="ambient-canvas" id="ambient-canvas" aria-hidden="true"></canvas>
+<div class="page-wrap">
+    <main class="main-shell">
+        <nav class="nav fade-in fade-delay-1">
+            <div class="logo">BAIT.PY</div>
+            <div class="nav-links">
+                <a href="index.html">home</a>
+                <a href="about.html">about</a>
+                <a class="active" href="proyectos.html">projects</a>
+                <a href="https://www.linkedin.com/in/brunoalonsopujol/" target="_blank" rel="noopener">contact</a>
+                <a href="https://github.com/bait-py" target="_blank" rel="noopener">github</a>
+            </div>
+        </nav>
 
-<div class="contenedor">
-    <h1 class="animate delay-1">Featured Projects</h1>
+        <section class="content">
+            <p class="kicker fade-in fade-delay-2">Featured repositories</p>
+            <h1 class="fade-in fade-delay-2">Projects I am actively proud of.</h1>
 
-    <div class="proyecto animate delay-2">
-        <h3><a href="https://github.com/bait-py/statify" target="_blank">> Statify <</a></h3>
-        <p>Containerized web application and API for Spotify artists to analyze their performance metrics.</p>
-    </div>
+            <div class="projects-grid fade-in fade-delay-3">
+                <article class="project-card">
+                    <h3><a href="https://github.com/bait-py/statify" target="_blank" rel="noopener">Statify</a></h3>
+                    <p>Containerized web application and API for Spotify artists to analyze their performance metrics.</p>
+                </article>
 
-    <div class="proyecto animate delay-3">
-        <h3><a href="https://github.com/bait-py/autostack" target="_blank">> AutoStack <</a></h3>
-        <p>Professional Docker stack generator for rapid development and production environment deployment.</p>
-    </div>
+                <article class="project-card">
+                    <h3><a href="https://github.com/bait-py/autostack" target="_blank" rel="noopener">AutoStack</a></h3>
+                    <p>Professional Docker stack generator for rapid development and production environment deployment.</p>
+                </article>
 
-    <div class="proyecto animate delay-4">
-        <h3><a href="https://github.com/bait-py/dotfiles" target="_blank">> Hyprland Dotfiles <</a></h3>
-        <p>My personal Hyprland configuration and other operating system configuration files.</p>
-    </div>
+                <article class="project-card">
+                    <h3><a href="https://github.com/bait-py/dotfiles" target="_blank" rel="noopener">Hyprland Dotfiles</a></h3>
+                    <p>My personal Hyprland configuration and other operating system configuration files.</p>
+                </article>
 
-    <div class="proyecto animate delay-5">
-        <h3><a href="https://github.com/bait-py/bubiserver" target="_blank">> BUBI Server <</a></h3>
-        <p>Multi-functional Raspberry Pi server for home automation and media hosting. Minimalist, useful, and DIY.</p>
-    </div>
+                <article class="project-card">
+                    <h3><a href="https://github.com/bait-py/bubiserver" target="_blank" rel="noopener">BUBI Server</a></h3>
+                    <p>Multi-functional Raspberry Pi server for home automation and media hosting. Minimalist, useful, and DIY.</p>
+                </article>
 
-    <div class="proyecto animate delay-6">
-        <h3><a href="https://github.com/bait-py/nyoloqchallenge" target="_blank">> League of Legends Stats Tracker <</a></h3>
-        <p>System that analyzes player performance using RiotAPI, with real-time graphics and data.</p>
-    </div>
+                <article class="project-card">
+                    <h3><a href="https://github.com/bait-py/nyoloqchallenge" target="_blank" rel="noopener">League of Legends Stats Tracker</a></h3>
+                    <p>System that analyzes player performance using RiotAPI, with real-time graphics and data.</p>
+                </article>
 
-    <div class="proyecto animate delay-7">
-        <h3><a href="https://github.com/bait-py/temasjoel" target="_blank">> JO-EL Themes <</a></h3>
-        <p>Custom visual themes for an educational platform, giving it style and making it more usable.</p>
-    </div>
+                <article class="project-card">
+                    <h3><a href="https://github.com/bait-py/temasjoel" target="_blank" rel="noopener">JO-EL Themes</a></h3>
+                    <p>Custom visual themes for an educational platform, giving it style and making it more usable.</p>
+                </article>
+            </div>
 
-    <div class="links animate delay-8">
-        <a href="index.html">home</a>
-        <span class="separator">//</span>
-        <a href="about.html">about</a>
-        <span class="separator">//</span>
-        <a href="https://www.linkedin.com/in/bruno-alonso-pujol-b14171262/" target="_blank">contact</a>
-        <span class="separator">//</span>
-        <a href="https://github.com/bait-py" target="_blank">github</a>
-    </div>
+            <div class="footer-links fade-in fade-delay-4">
+                <a href="about.html">My approach</a>
+                <a href="https://github.com/bait-py?tab=repositories" target="_blank" rel="noopener">All repositories</a>
+                <a href="https://bait-py.github.io/portfolio/" target="_blank" rel="noopener">Live portfolio</a>
+            </div>
+        </section>
+    </main>
 </div>
-
+<script src="assets/interactive.js" defer></script>
 </body>
 </html>

@@ -2,136 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Bruno Alonso</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    
-    <style>
-        html, body { 
-            height: 100%; 
-            margin: 0; 
-            font-family: 'JetBrains Mono', monospace;
-            background-color: #0D1117;
-            color: #c9d1d9;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        .contenedor {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 700px;
-        }
-        h1 { 
-            font-size: 24px; 
-            font-weight: 700;
-            margin: 0 0 20px;
-            color: #7A95C9;
-            letter-spacing: 2px;
-        }
-        p { 
-            margin: 15px 0; 
-            line-height: 1.8em;
-            font-size: 14px;
-            color: #c9d1d9;
-        }
-        strong, b {
-            color: #7A95C9;
-            font-weight: 600;
-        }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-            text-align: left;
-            display: inline-block;
-            color: #8b949e;
-        }
-        li {
-            margin: 8px 0;
-            line-height: 1.6em;
-        }
-        .links {
-            margin-top: 30px;
-        }
-        .links a { 
-            color: #7A95C9; 
-            text-decoration: none; 
-            margin: 0 8px; 
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        .links a:hover { 
-            color: #a8c5e8;
-            text-decoration: underline;
-        }
-        .separator {
-            color: #484f58;
-            margin: 0 5px;
-        }
-        
-        /* Animaciones de entrada */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-        }
-        
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
-        .delay-5 { animation-delay: 0.5s; }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+<canvas class="ambient-canvas" id="ambient-canvas" aria-hidden="true"></canvas>
+<div class="page-wrap">
+    <main class="main-shell">
+        <nav class="nav fade-in fade-delay-1">
+            <div class="logo">BAIT.PY</div>
+            <div class="nav-links">
+                <a href="index.html">home</a>
+                <a class="active" href="about.html">about</a>
+                <a href="proyectos.html">projects</a>
+                <a href="https://www.linkedin.com/in/brunoalonsopujol/" target="_blank" rel="noopener">contact</a>
+                <a href="https://github.com/bait-py" target="_blank" rel="noopener">github</a>
+            </div>
+        </nav>
 
-<div class="contenedor">
-    <h1 class="animate delay-1">BRUNO&nbsp;ALONSO</h1>
+        <section class="content">
+            <p class="kicker fade-in fade-delay-2">About me</p>
+            <h1 class="fade-in fade-delay-2">Engineering with purpose and clean execution.</h1>
 
-<p class="animate delay-2">I'm Bruno, a <strong>Full-Stack Developer</strong> and <strong>DevOps</strong> enthusiast.
-    I focus on building robust and scalable solutions using
-    <strong>TypeScript</strong>, <strong>Node.js</strong>, <strong>Java</strong>, and <strong>Python</strong>.
-    My approach is end-to-end development, from coding to optimized deployment.
-</p>
+            <div class="section fade-in fade-delay-3">
+                <p>I am Bruno, a <strong>Full-Stack Developer</strong> and <strong>DevOps</strong> enthusiast focused on building robust and scalable solutions using <strong>TypeScript</strong>, <strong>Node.js</strong>, <strong>Java</strong>, and <strong>Python</strong>.</p>
+            </div>
 
-<p class="animate delay-3">My passion includes:</p>
-<ul class="animate delay-4" style="list-style-type: square; padding-left: 20px; text-align: left; display: inline-block;">
-    <li><b>Automation</b> and <b>containerization</b> with tools like <b>Docker</b> and <b>Kubernetes</b>.</li>
-    <li>The world of operating systems (especially <b>Linux</b>) and infrastructure.</li>
-    <li>Discovering new technologies and applying my own usable and functional style to each project.</li>
-</ul>
+            <div class="section fade-in fade-delay-4">
+                <h2>How I like to work</h2>
+                <p>My approach is end-to-end development, from coding to optimized deployment. I care about reliability, maintainability, and creating software that solves real problems.</p>
+                <div class="tech-tags" aria-label="Professional interests">
+                    <span>Automation</span>
+                    <span>Containerization</span>
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>Linux Infrastructure</span>
+                    <span>Continuous Improvement</span>
+                </div>
+            </div>
 
-<div class="links animate delay-5">
-    <a href="index.html">home</a>
-    <span class="separator">//</span>
-    <a href="proyectos.html">projects</a>
-    <span class="separator">//</span>
-    <a href="https://www.linkedin.com/in/bruno-alonso-pujol-b14171262/" target="_blank">contact</a>
-    <span class="separator">//</span>
-    <a href="https://github.com/bait-py" target="_blank">github</a>
+            <div class="section fade-in fade-delay-5">
+                <h2>Languages and Tools</h2>
+                <p>Main stack based on my profile README and current portfolio projects.</p>
+                <div class="tech-tags" aria-label="Languages and tools">
+                    <span>TypeScript</span>
+                    <span>JavaScript</span>
+                    <span>Node.js</span>
+                    <span>Java</span>
+                    <span>Bash</span>
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>Ansible</span>
+                    <span>Linux</span>
+                    <span>Git</span>
+                    <span>Flutter</span>
+                </div>
+            </div>
+
+            <div class="section fade-in fade-delay-5">
+                <h2>Certifications</h2>
+                <p>Currently no certifications listed.</p>
+            </div>
+
+            <div class="section fade-in fade-delay-5">
+                <h2>Experience and Education</h2>
+                <p>For the full and up-to-date timeline, visit my LinkedIn profile.</p>
+            </div>
+
+            <div class="section fade-in fade-delay-5">
+                <h2>Passion areas</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>Automation and Containerization</h3>
+                        <p>Designing setups that reduce manual effort and speed up delivery through efficient workflows and reproducible environments.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Linux and Systems</h3>
+                        <p>Exploring operating systems and infrastructure deeply, with Linux as a central part of day-to-day engineering.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Practical Innovation</h3>
+                        <p>Discovering new technologies and applying a usable, functional style to every project.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="footer-links fade-in fade-delay-5">
+                <a href="proyectos.html">View featured work</a>
+                <a href="https://www.linkedin.com/in/brunoalonsopujol/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/bait-py" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </section>
+    </main>
 </div>
-</div>
-
+<script src="assets/interactive.js" defer></script>
 </body>
 </html>
